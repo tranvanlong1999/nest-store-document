@@ -1,138 +1,79 @@
-import { themes as prismThemes } from 'prism-react-renderer';
-import type { ThemeConfig } from '@docusaurus/preset-classic';
+import { themes as prismThemes } from "prism-react-renderer";
+import type { ThemeConfig } from "@docusaurus/preset-classic";
 
 export const themeConfig: ThemeConfig = {
-    image: 'img/docusaurus-social-card.jpg',
+  image: "img/docusaurus-social-card.jpg",
 
-    colorMode: {
-        respectPrefersColorScheme: true,
-    },
+  colorMode: {
+    respectPrefersColorScheme: true,
+  },
     navbar: {
-        title: 'HELIX//CORE',
+        title: "NEST STORE",
         items: [
             {
-                type: 'dropdown',
-                position: 'left',
-                label: 'Giải Pháp Công Nghệ',
-                items: [
-                    {
-                        type: 'docSidebar',
-                        sidebarId: 'deploymentArchitectureSidebar',
-                        label: 'Mô hình triển khai'
-                    },
-                    {
-                        type: 'doc',
-                        docId: 'giai-phap-cong-nghe/tai-lieu-ky-thuat/tong-quan/tong-quan',
-                        label: 'Tài liệu kỹ thuật',
-                        sidebarId: 'technicalDocumentationSidebar'
-                    }
-                ]
+                type: "doc",
+                docId: "giai-phap-cong-nghe/tai-lieu-ky-thuat/00-tong-quan",
+                label: "Tài liệu kỹ thuật",
+                position: "left",
             },
             {
-                type: 'docSidebar',
-                sidebarId: 'sdkSidebar',
-                label: 'SDKs',
-                position: 'left',
-            },
-            {
-                to: '/docs/api/helix',
-                label: 'Thử nghiệm API',
-                position: 'left',
-            },
-            {
-                type: 'docsVersionDropdown',
-                position: 'right',
+                type: "docsVersionDropdown",
+                position: "right",
                 dropdownActiveClassDisabled: true,
             },
         ],
     },
     footer: {
-        style: 'dark',
-        logo: {
-            alt: 'Helix Core',
-            src: 'img/logo.svg',
-            srcDark: 'img/logo-dark.svg',
-            width: 0,
-            height: 0,
-        },
+        style: "dark",
         links: [
             {
-                title: 'Product',
+                title: "Tài liệu hệ thống",
                 items: [
                     {
-                        label: 'Overview',
-                        to: '/docs/tong-quan',
+                        label: "Quản lý sản phẩm",
+                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/02-thiet-ke/02-use-cases/01-product-management",
                     },
                     {
-                        label: 'Documentation',
-                        to: '/docs/muc-luc',
+                        label: "Quản lý đơn hàng",
+                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/02-thiet-ke/02-use-cases/02-order-management",
                     },
                     {
-                        label: 'Architecture',
-                        to: '/docs/2-thiet-ke/tai-lieu-thiet-ke-he-thong-microservice',
-                    },
-                    {
-                        label: 'Use Cases',
-                        to: '/docs/2-thiet-ke/danh-sach-use-cases-cho-mvp',
+                        label: "Quản lý người dùng",
+                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/02-thiet-ke/02-use-cases/03-user-management",
                     },
                 ],
             },
             {
-                title: 'Resources',
+                title: "Kiến trúc & Công nghệ",
                 items: [
                     {
-                        label: 'Getting Started',
-                        to: '/docs/1-khoi-tao-lap-ke-hoach/tuyen-bo-tam-nhin-va-pham-vi-du-an',
+                        label: "Kiến trúc hệ thống",
+                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/03-kien-truc-he-thong",
                     },
                     {
-                        label: 'Project Plan',
-                        to: '/docs/1-khoi-tao-lap-ke-hoach/ke-hoach-quan-ly-du-an',
+                        label: "Backend Stack",
+                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/01-backend-stack",
                     },
                     {
-                        label: 'System Requirements',
-                        to: '/docs/1-khoi-tao-lap-ke-hoach/tai-lieu-yeu-cau-he-thong-chuc-nang',
+                        label: "Frontend Stack",
+                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/02-frontend-stack",
+                    },
+                    {
+                        label: "Người dùng & Bảo mật",
+                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/06-nguoi-dung-bao-mat",
+                    },
+                    {
+                        label: "Thiết kế API",
+                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/07-thiet-ke-api",
                     },
                 ],
             },
             {
-                title: 'Community',
+                title: "Cộng đồng",
                 items: [
                     {
-                        label: 'GitHub',
-                        href: 'https://github.com',
-                    },
-                    {
-                        label: 'Discord',
-                        href: 'https://discord.com',
-                    },
-                    {
-                        label: 'Twitter',
-                        href: 'https://twitter.com',
-                    },
-                    {
-                        label: 'LinkedIn',
-                        href: 'https://linkedin.com',
-                    },
-                ],
-            },
-            {
-                title: 'Legal',
-                items: [
-                    {
-                        label: 'Privacy Policy',
-                        href: '#',
-                    },
-                    {
-                        label: 'Terms of Service',
-                        href: '#',
-                    },
-                    {
-                        label: 'SLA',
-                        href: '#',
-                    },
-                    {
-                        label: 'Security',
-                        href: '#',
+                        label: "GitHub",
+                        href: "https://github.com",
                     },
                 ],
             },
@@ -140,40 +81,43 @@ export const themeConfig: ThemeConfig = {
         copyright: `
             <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
                 <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: #9ca3af;">
-                    © ${new Date().getFullYear()} Helix Core. All rights reserved.
+                    © ${new Date().getFullYear()} Nest Store. Bảo lưu mọi quyền.
                 </div>
                 <div style="margin-top: 0.5rem; font-size: 0.8rem; color: #6b7280;">
-                    Nền tảng marketplace thống nhất cho việc phân phối và tiêu thụ API services.
+                    Nền tảng thương mại điện tử hiện đại, ổn định và có khả năng mở rộng vượt trội.
                 </div>
             </div>
         `,
     },
-    prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-        additionalLanguages: [
-            'bash',
-            'json',
-            'yaml',
-            'http',
-            'javascript',
-            'typescript',
-            'python',
-            'java',
-            'csharp',
-            'php',
-            'ruby',
-            'go',
-            'rust',
-            'dart',
-            'kotlin',
-            'swift'
-        ],
-    },
-    zoom: {
-        selectors: ['div.mermaid[data-processed="true"]', 'div.docusaurus-mermaid-container'],
-        wrap: true,
-        timeout: 1000,
-        excludeClass: 'panzoom-exclude',
-    },
+  prism: {
+    theme: prismThemes.github,
+    darkTheme: prismThemes.dracula,
+    additionalLanguages: [
+      "bash",
+      "json",
+      "yaml",
+      "http",
+      "javascript",
+      "typescript",
+      "python",
+      "java",
+      "csharp",
+      "php",
+      "ruby",
+      "go",
+      "rust",
+      "dart",
+      "kotlin",
+      "swift",
+    ],
+  },
+  zoom: {
+    selectors: [
+      'div.mermaid[data-processed="true"]',
+      "div.docusaurus-mermaid-container",
+    ],
+    wrap: true,
+    timeout: 1000,
+    excludeClass: "panzoom-exclude",
+  },
 };

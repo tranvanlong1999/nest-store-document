@@ -78,7 +78,7 @@
     height: 600px;
     top: -200px;
     right: -200px;
-    background: radial-gradient(circle, var(--helix-accent-1) 0%, transparent 70%);
+    background: radial-gradient(circle, var(--brand-accent-1) 0%, transparent 70%);
     animation: orbFloat 20s ease-in-out infinite;
 }
 
@@ -87,7 +87,7 @@
     height: 400px;
     bottom: -100px;
     left: -100px;
-    background: radial-gradient(circle, var(--helix-accent-2) 0%, transparent 70%);
+    background: radial-gradient(circle, var(--brand-accent-2) 0%, transparent 70%);
     animation: orbFloat 15s ease-in-out infinite reverse;
 }
 

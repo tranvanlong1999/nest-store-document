@@ -238,7 +238,7 @@
 
 [data-theme='dark'] .btnSecondary {
     color: var(--text-primary) !important;
-    border-color: var(--helix-border-color) !important;
+    border-color: var(--border-color) !important;
 }
 
 /* Stats Section */

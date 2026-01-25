@@ -1,8 +1,8 @@
 {
-  "label": "E-commerce Modules",
+  "label": "Các Module Nghiệp vụ",
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "Core modules of the Nest Store e-commerce system."
+    "description": "Các danh mục nghiệp vụ cốt lõi của nền tảng thương mại điện tử Nest Store."
   }
 }

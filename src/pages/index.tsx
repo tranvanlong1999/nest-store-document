@@ -17,24 +17,23 @@ function HomepageHeader() {
             <div className={clsx(styles.gradientOrb, styles.orb2)}></div>
 
             <div className="container">
-                <span className={styles.heroTag}>E-commerce Platform</span>
+                <span className={styles.heroTag}>Nền tảng Thương mại điện tử</span>
                 <Heading as="h1" className={styles.heroTitle}>
                     Nest Store<br/>
-                    <span className={styles.gradientText}>Modern E-commerce Solution</span>
+                    <span className={styles.gradientText}>Giải pháp bán hàng hiện đại</span>
                 </Heading>
                 <p className={styles.heroDescription}>
-                    Comprehensive documentation for Nest Store - the scalable e-commerce platform built with NestJS and Postgres.
+                    Tài liệu kỹ thuật toàn diện cho Nest Store - nền tảng thương mại điện tử mạnh mẽ được xây dựng với Next.js 14, Java 21 và Spring Boot.
                 </p>
                 <div className={styles.buttons}>
                     <Link
-                        className={clsx("button button--lg", styles.btnPrimary)}
-                        to="/docs/00-giai-phap-cong-nghe/02-tai-lieu-ky-thuat/02-thiet-ke/02-use-cases/01-product-management">
-                        Explore Docs
+                        to="/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/00-tong-quan">
+                        Khám phá tài liệu
                     </Link>
                     <Link
                         className={clsx("button button--lg", styles.btnSecondary)}
-                        to="/docs/00-giai-phap-cong-nghe/02-tai-lieu-ky-thuat/02-thiet-ke">
-                        System Design
+                        to="/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/03-kien-truc-he-thong">
+                        Thiết kế hệ thống
                     </Link>
                 </div>
             </div>
@@ -44,10 +43,10 @@ function HomepageHeader() {
 
 function StatsSection() {
     const stats = [
-        { number: 'Postgres', label: 'Database' },
-        { number: 'NestJS', label: 'Framework' },
-        { number: 'Microservices', label: 'Architecture' },
-        { number: 'Docker', label: 'Containerized' },
+        { number: 'Next.js 14', label: 'Giao diện' },
+        { number: 'Spring Boot', label: 'Backend' },
+        { number: 'Postgres', label: 'Cơ sở dữ liệu' },
+        { number: 'Temporal', label: 'Luồng công việc' },
     ];
 
     return (
@@ -69,14 +68,14 @@ function StatsSection() {
 function ArchitectureSection() {
     const architectureBlocks = [
         [
-            { label: 'Catalog', title: 'Product Service' },
-            { label: 'Sales', title: 'Order Service' },
-            { label: 'Identity', title: 'User Service' },
+            { label: 'Danh mục', title: 'Quản lý Sản phẩm' },
+            { label: 'Bán hàng', title: 'Quản lý Đơn hàng' },
+            { label: 'Định danh', title: 'Quản lý Người dùng' },
         ],
         [
-            { label: 'Marketing', title: 'Blog & Promotions' },
-            { label: 'Operations', title: 'Branch Management' },
-            { label: 'Communication', title: 'Notification System' },
+            { label: 'Tiếp thị', title: 'Tin tức & Khuyến mãi' },
+            { label: 'Vận hành', title: 'Quản lý Chi nhánh' },
+            { label: 'Giao tiếp', title: 'Hệ thống Thông báo' },
         ],
     ];
 
@@ -84,10 +83,10 @@ function ArchitectureSection() {
         <section className={styles.architectureSection}>
             <div className="container">
                 <div className={styles.sectionHeader}>
-                    <span className={styles.sectionTag}>System Design</span>
-                    <Heading as="h2" className={styles.sectionTitle}>Modular Architecture</Heading>
+                    <span className={styles.sectionTag}>Thiết kế Hệ thống</span>
+                    <Heading as="h2" className={styles.sectionTitle}>Kiến trúc Module hóa</Heading>
                     <p className={styles.sectionDescription}>
-                        Built for scalability and maintainability with clear domain boundaries.
+                        Được xây dựng để đảm bảo tính mở rộng và khả năng bảo trì với ranh giới nghiệp vụ rõ ràng.
                     </p>
                 </div>
                 <div className={styles.architectureVisual}>
@@ -112,15 +111,15 @@ function CTASection() {
         <section className={styles.ctaSection}>
             <div className="container">
                 <div className={styles.ctaContent}>
-                    <Heading as="h2" className={styles.ctaTitle}>Ready to start?</Heading>
+                    <Heading as="h2" className={styles.ctaTitle}>Bắt đầu ngay hôm nay</Heading>
                     <p className={styles.ctaDescription}>
-                        Dive into the documentation to understand the data models and business logic.
+                        Tìm hiểu sâu hơn về mô hình dữ liệu và logic nghiệp vụ của hệ thống.
                     </p>
                     <div className={styles.buttons}>
                         <Link
                             className={clsx("button button--lg", styles.btnPrimary)}
-                            to="/docs/00-giai-phap-cong-nghe/02-tai-lieu-ky-thuat/02-thiet-ke/02-use-cases/01-product-management">
-                            Get Started
+                            to="/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/00-tong-quan">
+                            Bắt đầu ngay
                         </Link>
                     </div>
                 </div>
@@ -133,8 +132,8 @@ export default function Home(): ReactNode {
     const {siteConfig} = useDocusaurusContext();
     return (
         <Layout
-            title="Nest Store Docs"
-            description="Documentation for Nest Store E-commerce Platform">
+            title="Nest Store - Tài liệu kỹ thuật"
+            description="Tài liệu kỹ thuật toàn diện cho nền tảng thương mại điện tử Nest Store">
             <HomepageHeader/>
             <main>
                 <StatsSection/>

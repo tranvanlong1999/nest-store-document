@@ -1,8 +1,8 @@
 {
-  "label": "Technical Documentation",
+  "label": "Tài liệu Kỹ thuật",
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "Technical documentation and design."
+    "description": "Tài liệu kỹ thuật chi tiết về kiến trúc, database và luồng xử lý của hệ thống Nest Store."
   }
 }

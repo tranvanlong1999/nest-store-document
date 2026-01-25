@@ -77,16 +77,6 @@ const config: Config = {
                 id: 'openapi',
                 docsPluginId: 'classic',
                 config: {
-                    // helixApi: {
-                    //     specPath: 'api-swagger/helix-api.yaml',
-                    //     outputDir: 'docs/api/helix',
-                    //     sidebarOptions: {
-                    //         groupPathsBy: 'tag',
-                    //         categoryLinkSource: 'tag'
-                    //     },
-                    //     showSchemas: true,
-                    //     hideSendButton: false
-                    // },
                 }
             }
         ]
