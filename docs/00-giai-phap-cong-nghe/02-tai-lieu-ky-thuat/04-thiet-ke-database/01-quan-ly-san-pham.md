@@ -40,6 +40,17 @@ Hệ thống thuộc tính động cho phép thêm các thông số như Màu s�
 
 Quản lý cây danh mục sản phẩm đa cấp.
 
+### Bảng `tag` & `product_tag`
+
+Hệ thống nhãn dán giúp tìm kiếm và gợi ý sản phẩm liên quan.
+
+| Bảng          | Cột            | Mô tả                              |
+| :------------ | :------------- | :--------------------------------- |
+| `tag`         | `uuid_tag`     | ID thẻ tự tăng                     |
+| `tag`         | `name`         | Tên thẻ (ví dụ hướng nghiệp, tech) |
+| `product_tag` | `uuid_product` | FK liên kết sản phẩm               |
+| `product_tag` | `uuid_tag`     | FK liên kết thẻ                    |
+
 ---
 
 > [!TIP]

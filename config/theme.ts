@@ -12,7 +12,7 @@ export const themeConfig: ThemeConfig = {
         items: [
             {
                 type: "doc",
-                docId: "giai-phap-cong-nghe/tai-lieu-ky-thuat/00-tong-quan",
+                docId: "giai-phap-cong-nghe/tai-lieu-ky-thuat/tong-quan",
                 label: "Tài liệu kỹ thuật",
                 position: "left",
             },
@@ -31,15 +31,15 @@ export const themeConfig: ThemeConfig = {
                 items: [
                     {
                         label: "Quản lý sản phẩm",
-                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/02-thiet-ke/02-use-cases/01-product-management",
+                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/thiet-ke/use-cases/product-management/uc01-xem-danh-sach-san-pham",
                     },
                     {
                         label: "Quản lý đơn hàng",
-                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/02-thiet-ke/02-use-cases/02-order-management",
+                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/thiet-ke/use-cases/order-management/uc03-them-vao-gio-hang",
                     },
                     {
                         label: "Quản lý người dùng",
-                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/02-thiet-ke/02-use-cases/03-user-management",
+                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/thiet-ke/use-cases/user-management/uc05-dang-nhap-he-thong",
                     },
                 ],
             },
@@ -48,23 +48,23 @@ export const themeConfig: ThemeConfig = {
                 items: [
                     {
                         label: "Kiến trúc hệ thống",
-                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/03-kien-truc-he-thong",
+                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/kien-truc-he-thong",
                     },
                     {
                         label: "Backend Stack",
-                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/01-backend-stack",
+                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/backend-stack",
                     },
                     {
                         label: "Frontend Stack",
-                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/02-frontend-stack",
+                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/frontend-stack",
                     },
                     {
                         label: "Người dùng & Bảo mật",
-                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/06-nguoi-dung-bao-mat",
+                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/nguoi-dung-bao-mat",
                     },
                     {
                         label: "Thiết kế API",
-                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/07-thiet-ke-api",
+                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/thiet-ke-api",
                     },
                 ],
             },

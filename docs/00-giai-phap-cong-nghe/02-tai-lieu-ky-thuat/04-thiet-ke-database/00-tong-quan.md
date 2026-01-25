@@ -10,8 +10,9 @@ Hệ thống Nest Store sử dụng **PostgreSQL** làm cơ sở dữ liệu qua
 ## 1. Nguyên tắc Thiết kế Cốt lõi
 
 - **Tính nhất quán (ACID)**: Đảm bảo mọi giao dịch mua hàng, thanh toán đều an toàn và chính xác tuyệt đối.
-- **Định danh UUID v4**: Sử dụng UUID làm khóa chính cho tất cả các thực thể quan trọng (Product, Order, User) để đảm bảo tính duy nhất trong môi trường phân tán và an toàn thông tin (tránh IDOR).
-- **Soft Delete**: Các bản ghi quan trọng không bị xóa vật lý mà được đánh dấu qua trạng thái (status) hoặc cờ xóa để phục vụ mục đích Audit.
+- **Định danh UUID v4**: Sử dụng UUID làm khóa chính cho tất cả các thực thực quan trọng (Product, Order, User).
+- **Cơ chế Sequence**: Đối với các bảng cần định danh số tự tăng (như `message`, `tag`), hệ thống sử dụng `SEQUENCE` của PostgreSQL (ví dụ: `message_id_seq`) để tối ưu hiệu năng và tính tuần tự.
+- **Soft Delete**: Các bản ghi quan trọng không bị xóa vật lý mà được đánh dấu qua trạng thái (status).
 - **Auditing Fields**: Mọi bảng đều chứa `created_date` và `updated_date` để theo dõi vòng đời dữ liệu.
 
 ## 2. Phân tách Module Dữ liệu
