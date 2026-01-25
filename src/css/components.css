@@ -1,0 +1,119 @@
+/* Custom Components - Tailwind v4 Compatible (No @apply) */
+
+/* Feature card with gradient border animation */
+.feature-card {
+    background-color: white;
+    border: 1px solid rgb(229 231 235);
+    padding: 3rem 2.5rem;
+    height: 100%;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+[data-theme='dark'] .feature-card {
+    background-color: #151922;
+    border-color: rgba(0, 255, 200, 0.15);
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: linear-gradient(180deg, #00ffc8, #ff3d71);
+    transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.feature-card:hover {
+    transform: translateY(-0.25rem);
+    border-color: var(--ifm-color-primary);
+    box-shadow: 0 10px 60px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .feature-card:hover {
+    border-color: #00ffc8;
+    box-shadow: 0 10px 60px rgba(0, 255, 200, 0.2);
+}
+
+.feature-card:hover::before {
+    height: 100%;
+}
+
+/* Button glossy effect */
+.btn-primary-custom {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary-custom::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.btn-primary-custom:hover::before {
+    left: 100%;
+}
+
+/* Gradient orbs for hero section */
+.gradient-orb {
+    position: absolute;
+    border-radius: 9999px;
+    pointer-events: none;
+    filter: blur(120px);
+    opacity: 0.3;
+}
+
+.orb-1 {
+    width: 600px;
+    height: 600px;
+    top: -200px;
+    right: -200px;
+    background: radial-gradient(circle, var(--helix-accent-1) 0%, transparent 70%);
+    animation: orbFloat 20s ease-in-out infinite;
+}
+
+.orb-2 {
+    width: 400px;
+    height: 400px;
+    bottom: -100px;
+    left: -100px;
+    background: radial-gradient(circle, var(--helix-accent-2) 0%, transparent 70%);
+    animation: orbFloat 15s ease-in-out infinite reverse;
+}
+
+[data-theme='light'] .orb-1,
+[data-theme='light'] .orb-2 {
+    opacity: 0.15;
+}
+
+/* Grid overlay */
+.grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    background-image:
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 60px 60px;
+    animation: gridFadeIn 2s ease-out 0.5s forwards;
+}
+
+[data-theme='light'] .grid-overlay {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+}

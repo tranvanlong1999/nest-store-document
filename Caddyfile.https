@@ -1,0 +1,49 @@
+# Caddyfile for production with HTTPS
+# Replace 'your-domain.com' with your actual domain
+
+docs-smartvoice.icenter.ai {
+    # Caddy will automatically:
+    # - Get SSL certificate from Let's Encrypt
+    # - Redirect HTTP to HTTPS
+    # - Renew certificates automatically
+
+    root * /var/docusaurus
+    encode gzip zstd
+
+    # Set proper MIME types for YAML/YML files
+    header /*.yaml Content-Type "application/x-yaml; charset=utf-8"
+    header /*.yml Content-Type "application/x-yaml; charset=utf-8"
+
+    # CORS headers for API files
+    header /openapi/* {
+        Access-Control-Allow-Origin "*"
+        Access-Control-Allow-Methods "GET, OPTIONS"
+        Access-Control-Allow-Headers "Content-Type"
+    }
+
+    # SPA routing: serve index.html for all routes that don't match files
+    try_files {path} {path}/ /index.html
+
+    # Serve static files
+    file_server
+
+    # Optional: Add security headers
+    header {
+        # Enable HSTS
+        Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+        # Prevent clickjacking
+        X-Frame-Options "SAMEORIGIN"
+        # Prevent MIME sniffing
+        X-Content-Type-Options "nosniff"
+        # Enable XSS protection
+        X-XSS-Protection "1; mode=block"
+        # Referrer policy
+        Referrer-Policy "strict-origin-when-cross-origin"
+    }
+
+    # Optional: Logging
+    log {
+        output file /var/log/caddy/access.log
+        format json
+    }
+}

@@ -1,0 +1,26 @@
+# For production with domain (auto HTTPS)
+# Replace with your actual domain
+# your-domain.com {
+
+# For HTTP-only (testing/internal network)
+:3000 {
+    root * /var/docusaurus
+    encode gzip zstd
+
+    # Set proper MIME types for YAML/YML files
+    header /*.yaml Content-Type "application/x-yaml; charset=utf-8"
+    header /*.yml Content-Type "application/x-yaml; charset=utf-8"
+
+    # CORS headers for API files
+    header /openapi/* {
+        Access-Control-Allow-Origin "*"
+        Access-Control-Allow-Methods "GET, OPTIONS"
+        Access-Control-Allow-Headers "Content-Type"
+    }
+
+    # SPA routing: serve index.html for all routes that don't match files
+    try_files {path} {path}/ /index.html
+
+    # Serve static files
+    file_server
+}

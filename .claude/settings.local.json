@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(frontend-design)",
+      "Bash(npm run start)",
+      "Bash(npx docusaurus:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(taskkill:*)",
+      "Bash(timeout:*)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__get-library-docs",
+      "Bash(pnpm install:*)",
+      "Bash(pnpm start)",
+      "Bash(git checkout:*)",
+      "Bash(pnpm add:*)",
+      "mcp__context7__query-docs",
+      "Bash(rg:*)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(ls:*)"
+    ],
+    "deny": [],
+    "ask": []
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "shadcn",
+    "context7"
+  ]
+}

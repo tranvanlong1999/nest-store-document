@@ -1,0 +1,10 @@
+{
+    "label": "📚 Tổng quan",
+    "position": 1,
+    "collapsed": false,
+    "link": {
+        "type": "generated-index",
+        "title": "Tổng quan dự án Helix Core",
+        "description": "Các tài liệu tổng quan về dự án Helix Core, bao gồm kế hoạch triển khai và danh sách use cases"
+    }
+}

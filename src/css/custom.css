@@ -1,0 +1,590 @@
+/**
+ * Custom CSS for Helix Core Documentation
+ * Digital Cartography Theme
+ */
+
+/* Import Tailwind CSS v4 with proper scoping */
+@import "tailwindcss/theme.css" layer(theme);
+
+/* Scope preflight to avoid breaking Docusaurus styles */
+@layer base {
+    #tw-scope {
+        @import "tailwindcss/preflight.css" layer(base);
+    }
+}
+
+@import "tailwindcss/utilities.css" layer(utilities);
+
+/* Tailwind Theme Configuration */
+@theme {
+    /* Custom brand colors */
+    --color-helix-accent1: #00ffc8;
+    --color-helix-accent2: #ff3d71;
+    --color-helix-accent3: #ffd60a;
+}
+
+/* Dark mode configuration for Docusaurus */
+@custom-variant dark (&:is([data-theme="dark"] *));
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Schibsted+Grotesk:wght@400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Momo+Trust+Sans:wght@200..800&display=swap");
+
+/* Theme variables */
+:root {
+    /* Helix Core Brand Colors */
+    --helix-accent-1: #00ffc8;
+    --helix-accent-2: #ff3d71;
+    --helix-accent-3: #ffd60a;
+    --helix-text-primary: #1a1a1a;
+    --helix-text-secondary: #6b7280;
+    --helix-border-color: rgba(0, 0, 0, 0.1);
+
+    /* Docusaurus overrides - Light theme */
+    --ifm-color-primary: #ff3d71;
+    --ifm-color-primary-dark: #ff1f58;
+    --ifm-color-primary-darker: #ff0d4a;
+    --ifm-color-primary-darkest: #cc0038;
+    --ifm-color-primary-light: #ff5b8a;
+    --ifm-color-primary-lighter: #ff6d98;
+    --ifm-color-primary-lightest: #ff9bb4;
+
+    --ifm-background-color: #ffffff;
+    --ifm-background-surface-color: #f9fafb;
+    --ifm-navbar-background-color: rgba(255, 255, 255, 0.95);
+    --ifm-footer-background-color: #f9fafb;
+
+    --ifm-code-font-size: 95%;
+    --ifm-font-family-base: "Momo Trust Sans";
+    --ifm-font-family-monospace: 'JetBrains Mono', 'Courier New', monospace;
+
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+    --ifm-link-hover-color: #ff3d71;
+}
+
+/* Dark theme */
+[data-theme='dark'] {
+    --helix-accent-1: #00ffc8;
+    --helix-accent-2: #ff3d71;
+    --helix-accent-3: #ffd60a;
+    --helix-text-primary: #e8eaed;
+    --helix-text-secondary: #9ca3af;
+    --helix-border-color: rgba(0, 255, 200, 0.15);
+
+    --ifm-color-primary: #00ffc8;
+    --ifm-color-primary-dark: #00e6b3;
+    --ifm-color-primary-darker: #00d9a9;
+    --ifm-color-primary-darkest: #00b38a;
+    --ifm-color-primary-light: #1affce;
+    --ifm-color-primary-lighter: #2effd2;
+    --ifm-color-primary-lightest: #5cffdd;
+
+    --ifm-background-color: #0a0e14;
+    --ifm-background-surface-color: #151922;
+    --ifm-navbar-background-color: rgba(10, 14, 20, 0.95);
+    --ifm-footer-background-color: #0a0e14;
+
+    --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+    --ifm-link-hover-color: #00ffc8;
+}
+
+.markdown {
+    user-select: auto !important;
+}
+
+/* ==========================================
+   GLOBAL STYLES
+   ========================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--ifm-font-family-base);
+}
+
+/* Smooth page transitions */
+article {
+    animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   NAVBAR CUSTOMIZATION
+   ========================================== */
+
+.navbar {
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--helix-border-color);
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] .navbar {
+    border-bottom-color: var(--helix-border-color);
+    box-shadow: 0 1px 0 0 rgba(0, 255, 200, 0.05);
+}
+
+/* Logo styling */
+.navbar__brand {
+    font-family: var(--ifm-font-family-monospace);
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: -0.5px;
+}
+
+.navbar__logo {
+    height: 32px;
+}
+
+.navbar__title {
+    background: linear-gradient(135deg, var(--helix-accent-2), var(--helix-accent-3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+[data-theme='dark'] .navbar__title {
+    background: linear-gradient(135deg, var(--helix-accent-1), var(--helix-accent-3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Navigation links */
+.navbar__link {
+    font-family: var(--ifm-font-family-monospace);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar__link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--ifm-color-primary);
+    transition: width 0.3s ease;
+}
+
+.navbar__link:hover::after,
+.navbar__link--active::after {
+    width: 100%;
+}
+
+.navbar__link:hover {
+    color: var(--ifm-color-primary);
+}
+
+/* Navbar dropdown */
+.dropdown>.navbar__link {
+    font-family: var(--ifm-font-family-monospace);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Version dropdown */
+.navbar__item.dropdown .navbar__link::after {
+    display: none;
+}
+
+/* ==========================================
+   FOOTER CUSTOMIZATION
+   ========================================== */
+
+.footer {
+    background: var(--ifm-footer-background-color);
+    border-top: 1px solid var(--helix-border-color);
+    padding: 3rem 0 2rem;
+}
+
+[data-theme='dark'] .footer {
+    border-top-color: var(--helix-border-color);
+}
+
+.footer__title {
+    font-family: var(--ifm-font-family-monospace);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--helix-text-secondary);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.footer__item {
+    font-size: 0.9rem;
+    color: var(--helix-text-secondary);
+    transition: color 0.3s ease;
+    margin-bottom: 0.5rem;
+}
+
+.footer__link-item {
+    color: var(--helix-text-secondary);
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.footer__link-item:hover {
+    color: var(--ifm-color-primary);
+    text-decoration: none;
+    transform: translateX(3px);
+}
+
+.footer__bottom {
+    border-top: 1px solid var(--helix-border-color);
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+}
+
+.footer__copyright {
+    font-family: var(--ifm-font-family-monospace);
+    font-size: 0.75rem;
+    color: var(--helix-text-secondary);
+    letter-spacing: 0.5px;
+}
+
+/* Footer logo/brand */
+.footer__logo {
+    font-family: var(--ifm-font-family-monospace);
+    font-size: 1.2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--helix-accent-2), var(--helix-accent-3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+}
+
+[data-theme='dark'] .footer__logo {
+    background: linear-gradient(135deg, var(--helix-accent-1), var(--helix-accent-3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ==========================================
+   BUTTON CUSTOMIZATION
+   ========================================== */
+
+.button {
+    font-family: var(--ifm-font-family-monospace);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: 4px;
+}
+
+.button--primary {
+    background: var(--ifm-color-primary);
+    border-color: var(--ifm-color-primary);
+    box-shadow: 0 0 20px rgba(255, 61, 113, 0.2);
+}
+
+.button--primary:hover {
+    background: var(--ifm-color-primary-dark);
+    border-color: var(--ifm-color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 30px rgba(255, 61, 113, 0.3);
+}
+
+[data-theme='dark'] .button--primary {
+    box-shadow: 0 0 20px rgba(0, 255, 200, 0.2);
+}
+
+[data-theme='dark'] .button--primary:hover {
+    box-shadow: 0 5px 30px rgba(0, 255, 200, 0.3);
+}
+
+.button--secondary {
+    border: 2px solid var(--ifm-color-emphasis-600) !important;
+    background: transparent !important;
+    color: var(--ifm-color-emphasis-900) !important;
+}
+
+.button--secondary:hover {
+    border-color: var(--ifm-color-primary) !important;
+    color: var(--ifm-color-primary) !important;
+    transform: translateY(-2px);
+    background: var(--ifm-background-surface-color) !important;
+}
+
+[data-theme='dark'] .button--secondary {
+    border-color: var(--helix-border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+[data-theme='dark'] .button--secondary:hover {
+    background: rgba(0, 255, 200, 0.05) !important;
+}
+
+/* ==========================================
+   SIDEBAR CUSTOMIZATION
+   ========================================== */
+
+.menu__link {
+    font-size: 0.9rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.menu__link:hover {
+    background: var(--ifm-menu-color-background-hover);
+    color: var(--ifm-color-primary);
+}
+
+.menu__link--active {
+    color: var(--ifm-color-primary);
+    font-weight: 600;
+    border-left: 3px solid var(--ifm-color-primary);
+    padding-left: calc(var(--ifm-menu-link-padding-horizontal) - 3px);
+}
+
+.menu__list-item-collapsible:hover {
+    background: var(--ifm-menu-color-background-hover);
+}
+
+/* ==========================================
+   CODE BLOCKS
+   ========================================== */
+
+code {
+    font-family: var(--ifm-font-family-monospace);
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.theme-code-block {
+    border-radius: 8px;
+    margin: 1rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .theme-code-block {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================
+   SCROLLBAR CUSTOMIZATION
+   ========================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--ifm-background-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--helix-text-secondary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme='dark'] ::-webkit-scrollbar-thumb:hover {
+    background: var(--ifm-color-primary);
+}
+
+/* ==========================================
+   DOCS CONTENT CUSTOMIZATION
+   ========================================== */
+
+/* Headings */
+.markdown h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    margin-bottom: 1.5rem;
+    color: var(--ifm-heading-color);
+    border-bottom: 2px solid var(--ifm-color-emphasis-200);
+    padding-bottom: 0.5rem;
+}
+
+.markdown h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--ifm-heading-color);
+}
+
+.markdown h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Links */
+.markdown a {
+    color: var(--ifm-color-primary);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.markdown a:hover {
+    border-bottom-color: var(--ifm-color-primary);
+}
+
+/* Tables */
+.markdown table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    width: fit-content;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    th,
+    td {
+        border: 1px solid var(--ifm-color-emphasis-200);
+    }
+
+}
+
+[data-theme='dark'] .markdown table {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.markdown table th {
+    background: var(--ifm-color-emphasis-100);
+    font-family: var(--ifm-font-family-monospace);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+[data-theme='dark'] .markdown table th {
+    background: var(--ifm-color-emphasis-200);
+}
+
+/* Admonitions */
+.theme-admonition {
+    border-radius: 8px;
+    border-left-width: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] .theme-admonition {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Blockquotes */
+.markdown blockquote {
+    border-left: 4px solid var(--ifm-color-primary);
+    border-radius: 4px;
+    background: var(--ifm-background-surface-color);
+    padding: 1rem 1.5rem;
+    font-style: italic;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] .markdown blockquote {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Pagination */
+.pagination-nav__link {
+    border-radius: 8px;
+    border: 2px solid var(--ifm-color-emphasis-200);
+    transition: all 0.3s ease;
+}
+
+.pagination-nav__link:hover {
+    border-color: var(--ifm-color-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .pagination-nav__link:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.pagination-nav__label {
+    font-family: var(--ifm-font-family-monospace);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--ifm-color-primary);
+}
+
+/* Table of Contents */
+.table-of-contents {
+    font-size: 0.85rem;
+}
+
+.table-of-contents__link {
+    transition: all 0.2s ease;
+    border-left: 2px solid transparent;
+    padding-left: 0.5rem;
+}
+
+.table-of-contents__link:hover,
+.table-of-contents__link--active {
+    border-left-color: var(--ifm-color-primary);
+    color: var(--ifm-color-primary);
+}
+
+.table-of-contents__link code {
+    background: none;
+    padding: 0;
+    border: none;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media screen and (max-width: 996px) {
+    .navbar__link::after {
+        display: none;
+    }
+
+    .footer {
+        padding: 2rem 0 1.5rem;
+    }
+
+    .markdown h1 {
+        font-size: 2rem;
+    }
+
+    .markdown h2 {
+        font-size: 1.5rem;
+    }
+
+    .markdown h3 {
+        font-size: 1.2rem;
+    }
+}

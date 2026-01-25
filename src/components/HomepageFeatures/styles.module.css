@@ -1,0 +1,116 @@
+.features {
+    padding: 120px 0;
+    width: 100%;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.sectionTag {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 12px;
+    color: var(--ifm-color-danger);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+[data-theme='dark'] .sectionTag {
+    color: #ff3d71;
+}
+
+.sectionTitle {
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 900;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.sectionDescription {
+    font-size: 18px;
+    color: var(--ifm-color-emphasis-700);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+[data-theme='dark'] .sectionDescription {
+    color: #9ca3af;
+}
+
+.featureCard {
+    background: var(--ifm-background-surface-color);
+    border: 1px solid var(--ifm-color-emphasis-200);
+    padding: 50px 40px;
+    height: 100%;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.featureCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: linear-gradient(180deg, #00ffc8, #ff3d71);
+    transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.featureCard:hover {
+    transform: translateY(-5px);
+    border-color: var(--ifm-color-primary);
+    box-shadow: 0 10px 60px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .featureCard {
+    background: #151922;
+    border-color: rgba(0, 255, 200, 0.15);
+}
+
+[data-theme='dark'] .featureCard:hover {
+    border-color: #00ffc8;
+    box-shadow: 0 10px 60px rgba(0, 255, 200, 0.2);
+}
+
+.featureCard:hover::before {
+    height: 100%;
+}
+
+.featureIcon {
+    font-size: 48px;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.featureTitle {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.featureDescription {
+    font-size: 16px;
+    color: var(--ifm-color-emphasis-700);
+    line-height: 1.7;
+    margin: 0;
+}
+
+[data-theme='dark'] .featureDescription {
+    color: #9ca3af;
+}
+
+@media screen and (max-width: 996px) {
+    .features {
+        padding: 80px 0;
+    }
+
+    .sectionHeader {
+        margin-bottom: 60px;
+    }
+}
