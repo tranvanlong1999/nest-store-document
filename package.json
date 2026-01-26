@@ -5,7 +5,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start -p 3001",
-    "build": "docusaurus build",
+    "build": "npm run gen-api-docs && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -13,7 +13,7 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "gen-api-docs": "docusaurus gen-api-docs",
+    "gen-api-docs": "docusaurus gen-api-docs neststore",
     "clean-api-docs": "docusaurus clean-api-docs"
   },
   "dependencies": {
