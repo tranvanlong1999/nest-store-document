@@ -1,0 +1,71 @@
+---
+id: login-user
+title: "User login"
+description: "Authenticate user and get access token"
+sidebar_label: "User login"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVt9z4jYQ/lc8+2zA5IDm/HS53LVD5uYuE5K2MwwPQl6wLrakk9YklPH/3lnZAVNomk7LC5a1+rQ/vv3WOyCx9pDO4aqiHDUpKUgZDYsYMvTSKRuWaXcfo8qji4TOojVSJKRE7yMyj6ghBmPRBYxpBikUZq30g0cHMTj8UaGnjybbQroLS+Uwg5RchTFIowk18Zawtmg9GXz3fP8OvMyxFPxEW4uQgll+R0ktbgM0ByyFKiAGK7x/Mi7jQKxjn0ih59ONxQHGk1N6DTGsjCsFQbrHwGdR2oJtON4P7bIvTQl154bXoPZGXTSPsnJ4224NL95BXcdAisLuF87YXZMqqGvecuit0b7x/yJJ+O+4OrMqFGFVFVHIOPyHdB6nq6nufSjumUgPUeH2Jl/+ItU3dTN9+GM6/KqmfqrvxvJ6Opk+2t9/vb553+/3IcSzcujz/xcUn61y6KddRKUJ14F7e8h3kySp41DRfw5evV7dqlLHlR2PE7wcJUkPL94ve6NhNuqJn4aT3mg0mYzHo1GSJEnw9Y0crGPQosRTS06iKc5sxIC6KrkTqqbpRFYGOmxQZ8bBoo5BOhSE2RW96kEmCHukSuTLKpv9uyMdQofuP8PwhtMtxUfJ8JTVU70Rhcoi6TBj7RGFD0AlUm5YXazxoWiCckhhICrKBy/89+g26FjbdlC5AlLIiWw6GBRGiiI3ntLL5DIZCKsGmyH8Ve++sFX0CTdYGFuipmgWAKGOu3g+HTBCX6Onnifjgj6cA7x1JqskLyL/d0iexFrpde9tiLPGeg+3iBtpUbSdcXc3HP6IwqFj+e7Uji/kHAUzSGEZjCBuH35+qejNb/ch46wadwf5/vzC+L2cnkpkVyHPSV4MSq9M8KnlxVf0FM044ujqdnoS7ueeNGWJTmJ0Wwhi1rFd9MnIigsU9C1aGRcdgALxnW8Ahv2kn7TKKCR1vfeVtcbRh+Okh9CZY6UIqtL0YiD0XmaPfNwdVPftA7MtCeEzDWwhlA4N54I+NMyeAzMb4maa8khj+vL73W4pPD64oq759Y8K3RbS+SKGjXBKLDmvc+75HEXGijffwSNuIYXrxtHePd/O5kXFXpyMCiZpc+JKSrT0qu2i05u332b3TKh22pcm4zNOPPHEFk+QQvhY4NOBp+HdDgqh15VYs22Dyb8/AWf487s=
+sidebar_class_name: "post api-method"
+info_path: docs/api/nest-store-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"User login"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/auth/login"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Authenticate user and get access token
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["email","password"],"properties":{"email":{"type":"string","format":"email","example":"user@example.com"},"password":{"type":"string","format":"password","example":"securePassword123"}},"title":"LoginRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful login","content":{"application/json":{"schema":{"type":"object","properties":{"accessToken":{"type":"string","example":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."},"refreshToken":{"type":"string","example":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."},"expiresIn":{"type":"integer","example":3600},"user":{"type":"object","properties":{"id":{"type":"string","format":"uuid","example":"550e8400-e29b-41d4-a716-446655440000"},"email":{"type":"string","format":"email"},"name":{"type":"string"},"role":{"type":"string","enum":["user","admin","vendor"]},"createdAt":{"type":"string","format":"date-time"},"updatedAt":{"type":"string","format":"date-time"}},"title":"User"}},"title":"LoginResponse"}}}},"401":{"description":"Invalid credentials"}}}
+>
+  
+</StatusCodes>
+
+
+      

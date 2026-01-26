@@ -1,4 +1,5 @@
 ---
+sidebar_position: 13
 title: "UC13 - Quản lý Chi nhánh (Admin)"
 description: Kịch bản quản lý các địa điểm kinh doanh vật lý của hệ thống.
 ---
@@ -54,3 +55,4 @@ Cho phép Quản trị viên thiết lập và quản lý các chi nhánh (Branc
 
 > [!IMPORTANT]
 > Một người dùng (`uuid_user`) chỉ được quản lý duy nhất một chi nhánh tại một thời điểm (Unique Constraint trên bảng `branch`).
+

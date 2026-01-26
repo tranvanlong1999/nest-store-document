@@ -1,0 +1,8 @@
+{
+  "label": "Quản lý Người dùng (User)",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Các use case liên quan đến tài khoản, phân quyền và thông tin cá nhân."
+  }
+}

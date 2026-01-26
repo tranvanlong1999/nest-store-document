@@ -1,4 +1,5 @@
 ---
+sidebar_position: 3
 title: UC03 - Thêm sản phẩm vào giỏ hàng
 description: Mô tả kịch bản khách hàng thêm sản phẩm vào giỏ hàng cá nhân.
 ---
@@ -65,3 +66,4 @@ Cho phép khách hàng đang đăng nhập hoặc khách vãng lai thêm các s�
 
 > [!WARNING]
 > Nếu `quantity` yêu cầu vượt quá tồn kho, hệ thống trả về mã lỗi `400 Bad Request`.
+

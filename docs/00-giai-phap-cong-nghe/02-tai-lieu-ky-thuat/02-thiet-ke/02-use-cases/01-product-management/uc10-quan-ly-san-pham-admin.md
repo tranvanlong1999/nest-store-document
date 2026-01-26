@@ -1,4 +1,5 @@
 ---
+sidebar_position: 10
 title: "UC10 - Thêm/Sửa sản phẩm (Admin)"
 description: Kịch bản quản trị viên quản lý danh sách sản phẩm và kho hàng.
 ---
@@ -64,3 +65,4 @@ Cho phép Quản trị viên (Admin) hoặc nhân viên có quyền tạo mới 
 
 > [!IMPORTANT]
 > Mọi thay đổi về số lượng (`quantity`) sẽ được đồng bộ ngay lập tức với hệ thống tồn kho thực tế.
+

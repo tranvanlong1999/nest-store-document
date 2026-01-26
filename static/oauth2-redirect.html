@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>OAuth2 Redirect</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      function run() {
+        var oauth2 = window.opener.swaggerUIRedirectOauth2;
+        var sentState = oauth2.state;
+        var redirectUrl = oauth2.redirectUrl;
+        var isValid, qp, arr;
+
+        if (/code|token|error/.test(window.location.hash)) {
+          qp = window.location.hash.substring(1).replace("?", "&");
+        } else {
+          qp = location.search.substring(1);
+        }
+
+        arr = qp.split("&");
+        arr.forEach(function (v, i, _arr) {
+          var _arr = v.split("=");
+          if (_arr[0] === "state") {
+            isValid = _arr[1] === sentState;
+          }
+        });
+
+        if (
+          (oauth2.auth.schema.get("flow") === "accessCode" ||
+            oauth2.auth.schema.get("flow") === "authorizationCode" ||
+            oauth2.auth.schema.get("flow") === "authorization_code") &&
+          !oauth2.auth.code
+        ) {
+          if (!isValid) {
+            oauth2.errCb({
+              authId: oauth2.auth.name,
+              source: "auth",
+              level: "warning",
+              message:
+                "Authorization may be unsafe, passed state was changed in server. The passed state wasn't returned from auth server.",
+            });
+          }
+
+          if (qp) {
+            arr = qp.split("&");
+            arr.forEach(function (v, i, _arr) {
+              var _arr = v.split("=");
+              if (_arr[0] === "code") {
+                oauth2.auth.code = _arr[1];
+              } else if (_arr[0] === "error") {
+                oauth2.errCb({
+                  authId: oauth2.auth.name,
+                  source: "auth",
+                  level: "error",
+                  message: _arr[1],
+                });
+              }
+            });
+
+            if (oauth2.auth.code) {
+              oauth2.callback({ auth: oauth2.auth, redirectUrl: redirectUrl });
+            }
+          } else {
+            oauth2.errCb({
+              authId: oauth2.auth.name,
+              source: "auth",
+              level: "error",
+              message:
+                "Authorization failed: no code or token was received from the authorization server.",
+            });
+          }
+        } else {
+          oauth2.callback({
+            auth: oauth2.auth,
+            token: qp,
+            isValid: isValid,
+            redirectUrl: redirectUrl,
+          });
+        }
+        window.close();
+      }
+
+      if (document.readyState !== "loading") {
+        run();
+      } else {
+        document.addEventListener("DOMContentLoaded", function () {
+          run();
+        });
+      }
+    </script>
+  </body>
+</html>

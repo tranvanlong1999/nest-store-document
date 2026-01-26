@@ -1,4 +1,5 @@
 ---
+sidebar_position: 15
 title: "UC15 - Quản lý Cấu hình Ngôn ngữ (Admin)"
 description: Kịch bản quản trị hệ thống đa ngôn ngữ (I18n).
 ---
@@ -54,3 +55,4 @@ Cho phép Quản trị viên cập nhật các chuỗi ký tự hiển thị (la
 
 > [!NOTE]
 > Bảng này đóng vai trò là xương sống cho việc bản địa hóa (localization) toàn diện ứng dụng mà không cần thay đổi mã nguồn.
+

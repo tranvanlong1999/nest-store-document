@@ -1,4 +1,5 @@
 ---
+sidebar_position: 1
 title: UC01 - Xem danh sách sản phẩm
 description: Mô tả chi tiết kịch bản người dùng xem danh sách sản phẩm trên hệ thống.
 ---
@@ -76,3 +77,4 @@ Cung cấp các tham số thông qua Query String để phân trang và tìm l�
 
 > [!TIP]
 > Sử dụng tham số `q` để tìm kiếm nhanh theo tiêu đề sản phẩm (Title).
+

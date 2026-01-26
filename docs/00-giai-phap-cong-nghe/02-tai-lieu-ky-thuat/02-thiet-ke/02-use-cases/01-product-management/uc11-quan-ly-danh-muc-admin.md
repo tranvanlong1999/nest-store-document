@@ -1,4 +1,5 @@
 ---
+sidebar_position: 11
 title: "UC11 - Quản lý Danh mục (Admin)"
 description: Kịch bản quản trị viên thiết lập cây danh mục sản phẩm.
 ---
@@ -53,3 +54,4 @@ Cho phép Quản trị viên xây dựng cấu trúc danh mục sản phẩm (Ca
 
 > [!CAUTION]
 > Khi xóa một danh mục, hệ thống cần kiểm tra xem có sản phẩm nào đang thuộc danh mục đó không (Bảng `product_category`).
+

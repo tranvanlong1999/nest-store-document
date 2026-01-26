@@ -1,4 +1,5 @@
 import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
+import apiSidebar from "./docs/api/sidebar";
 
 const sidebars: SidebarsConfig = {
     // Tài liệu kỹ thuật sidebar
@@ -8,6 +9,19 @@ const sidebars: SidebarsConfig = {
             dirName: '00-giai-phap-cong-nghe/02-tai-lieu-ky-thuat'
         }
     ],
+    apiSidebar: [
+        {
+            type: "category",
+            label: "THỬ NGHIỆM API",
+            link: {
+                type: "generated-index",
+                title: "THỬ NGHIỆM API",
+                description: "Tài liệu API chi tiết và công cụ thử nghiệm trực tiếp",
+                slug: "/api"
+            },
+            items: apiSidebar
+        }
+    ]
 };
 
 export default sidebars;

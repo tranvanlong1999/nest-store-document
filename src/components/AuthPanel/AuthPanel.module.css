@@ -1,0 +1,103 @@
+.authPanel {
+  background: var(--ifm-background-surface-color);
+  border: 2px solid var(--ifm-color-primary);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.authHeader h3 {
+  margin: 0 0 15px 0;
+  color: var(--ifm-color-primary);
+  font-size: 1.2rem;
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  font-size: 14px;
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+}
+
+.input:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+}
+
+.btnLogin,
+.btnLogout {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnLogin {
+  background: var(--ifm-color-primary);
+  color: white;
+}
+
+.btnLogin:hover:not(:disabled) {
+  background: var(--ifm-color-primary-dark);
+  transform: translateY(-2px);
+}
+
+.btnLogin:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btnLogout {
+  background: #ff3d71;
+  color: white;
+  margin-top: 10px;
+}
+
+.btnLogout:hover {
+  background: #ff1f58;
+}
+
+.authSuccess {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.authSuccess p {
+  margin: 0;
+  font-weight: 600;
+  color: #00b38a;
+}
+
+.token {
+  background: var(--ifm-code-background);
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  word-break: break-all;
+  display: block;
+}
+
+.message {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  background: var(--ifm-color-emphasis-100);
+  font-size: 14px;
+}
+
+[data-theme='dark'] .input {
+  background: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-400);
+}

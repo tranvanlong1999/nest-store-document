@@ -1,0 +1,71 @@
+---
+id: get-product
+title: "Get product by ID"
+description: "Retrieve a single product by its ID"
+sidebar_label: "Get product by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNU01vEzEQ/SvWO4HkZreoh8onilKqIISqBsQhysHZnSQWu7Zrz0ZEq/3vaDbb0gJFPfnr+c3Mm3k92O4yzAq3KdRdxRlrjZpylVxkFzwM7oiTowMpq7Lzu4ZUPGHV5qgcZ7WYQyNESlZ+LGoY7IgnQmhEm2xLTEkC9fC2JRi4GhpOAkTLe2gkuu9cohqGU0caudpTa2F68DHKj8zJ+R2GYS3gHIPPlOX9XVnK8jztKb6qia1rMgaNi/LiZZwPrLah8zWGQaMl3oepkrEE3sOgmCrPRe/qARqZ0uGhri41MNgzR1MUTahssw+ZzWV5WRY2uuJwjj+l/SwoNacDNSG25FktR0IM+ilfNoUwzDxlPsscEs2q0P6LcCrGBa/yS0yZ7c753dnrGJcn9CPdWoquuuT4uJQGnTrwgWyidNWJSo/9koCY+ijnzQiCnjYfQ2otw+DT96+j5s5vw/jdcSP4L5RZLSU5dXW7+Cuz67MqtC2litRtY3kbUis4NQ9VJ1qO06i2IanfRNCQfp0IzmflrIRGFTzbiiU0tdaJVrmLMSR+/1yfMcsYMrfWC3qa5Bvip5YY7fAs1X4MQZ5f7aZJQaafXMTGOi/jO7axn2ZxhYdZhIZxtfhW5k1e+n5jM31LzTDI9X1H6QizWmscbHJ2I+quetQuy76G2dom03+SfnM3efOteim56dL6o2hsm05O0PhBx5PZh/VTW91cS89/Ab6OiNk=
+sidebar_class_name: "get api-method"
+info_path: docs/api/nest-store-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get product by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/products/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieve a single product by its ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Product details"},"404":{"description":"Product not found"}}}
+>
+  
+</StatusCodes>
+
+
+      

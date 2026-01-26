@@ -17,6 +17,11 @@ export const themeConfig: ThemeConfig = {
                 position: "left",
             },
             {
+                to: "/api-auth",
+                label: "THỬ NGHIỆM API",
+                position: "left",
+            },
+            {
                 type: "docsVersionDropdown",
                 position: "right",
                 dropdownActiveClassDisabled: true,
@@ -31,15 +36,15 @@ export const themeConfig: ThemeConfig = {
                 items: [
                     {
                         label: "Quản lý sản phẩm",
-                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/thiet-ke/use-cases/product-management/uc01-xem-danh-sach-san-pham",
+                        to: "/docs/00-giai-phap-cong-nghe/02-tai-lieu-ky-thuat/02-thiet-ke/02-use-cases/01-product-management/uc01-xem-danh-sach-san-pham",
                     },
                     {
                         label: "Quản lý đơn hàng",
-                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/thiet-ke/use-cases/order-management/uc03-them-vao-gio-hang",
+                        to: "/docs/00-giai-phap-cong-nghe/02-tai-lieu-ky-thuat/02-thiet-ke/02-use-cases/02-order-management/uc03-them-vao-gio-hang",
                     },
                     {
                         label: "Quản lý người dùng",
-                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/thiet-ke/use-cases/user-management/uc05-dang-nhap-he-thong",
+                        to: "/docs/00-giai-phap-cong-nghe/02-tai-lieu-ky-thuat/02-thiet-ke/02-use-cases/03-user-management/uc05-dang-nhap-he-thong",
                     },
                 ],
             },

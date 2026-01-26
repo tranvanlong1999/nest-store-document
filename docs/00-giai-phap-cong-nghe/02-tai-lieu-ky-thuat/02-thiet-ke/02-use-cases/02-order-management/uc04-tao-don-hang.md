@@ -1,4 +1,5 @@
 ---
+sidebar_position: 4
 title: UC04 - Tạo đơn hàng
 description: Mô tả kịch bản chuyển đổi giỏ hàng thành đơn hàng chính thức.
 ---
@@ -70,3 +71,4 @@ Cho phép khách hàng chuyển đổi các mặt hàng trong giỏ hàng thành
 
 > [!IMPORTANT]
 > Quy trình tạo đơn hàng được xử lý Atomic (Nguyên tử) để đảm bảo không mất dữ liệu hoặc sai lệch tồn kho.
+

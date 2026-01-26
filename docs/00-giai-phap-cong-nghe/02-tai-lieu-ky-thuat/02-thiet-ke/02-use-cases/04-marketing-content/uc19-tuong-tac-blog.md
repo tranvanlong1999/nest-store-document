@@ -1,4 +1,5 @@
 ---
+sidebar_position: 19
 title: "UC19 - Tương tác bài viết Blog"
 description: Mô tả kịch bản người dùng bình luận hoặc thích nội dung marketing.
 ---
@@ -54,3 +55,4 @@ Cho phép người dùng tham gia thảo luận về các bài viết blog bằn
 
 > [!TIP]
 > Hệ thống hỗ trợ cây bình luận vô hạn thông qua quan hệ `uuid_parent_blog_review`.
+

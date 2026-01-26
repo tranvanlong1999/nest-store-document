@@ -1,0 +1,76 @@
+/* Swagger UI Custom Styles */
+
+/* Fix input visibility in dark mode */
+.swagger-ui input[type="text"],
+.swagger-ui input[type="password"],
+.swagger-ui textarea,
+.swagger-ui select {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #d9d9d9 !important;
+  padding: 8px !important;
+}
+
+.swagger-ui input[type="text"]:focus,
+.swagger-ui input[type="password"]:focus,
+.swagger-ui textarea:focus,
+.swagger-ui select:focus {
+  outline: 2px solid #4990e2 !important;
+  background-color: #ffffff !important;
+}
+
+/* Fix modal/dialog styles */
+.swagger-ui .dialog-ux .modal-ux {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.swagger-ui .dialog-ux .modal-ux-header {
+  background-color: #f7f7f7 !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.swagger-ui .dialog-ux .modal-ux-content {
+  background-color: #ffffff !important;
+}
+
+/* Fix checkbox and label visibility */
+.swagger-ui label {
+  color: #000000 !important;
+}
+
+.swagger-ui .checkbox label {
+  color: #000000 !important;
+}
+
+/* Fix button styles */
+.swagger-ui button.authorize {
+  background-color: #4990e2 !important;
+  color: #ffffff !important;
+}
+
+.swagger-ui button.btn-done,
+.swagger-ui button.authorize {
+  border: none !important;
+}
+
+/* Fix scope selection */
+.swagger-ui .scopes h2 {
+  color: #000000 !important;
+}
+
+/* Ensure all text in auth modal is visible */
+.swagger-ui .auth-container * {
+  color: #000000 !important;
+}
+
+.swagger-ui .auth-container input {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Fix close button */
+.swagger-ui .close-modal {
+  background-color: transparent !important;
+  color: #000000 !important;
+}

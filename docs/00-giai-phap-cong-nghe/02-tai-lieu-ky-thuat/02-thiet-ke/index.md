@@ -11,9 +11,9 @@ Technical documentation for the Nest Store E-commerce platform.
 
 Detailed documentation for the core logic and database schema of the system.
 
-- [product-management](02-use-cases/01-product-management)
-- [order-management](02-use-cases/02-order-management)
-- [user-management](02-use-cases/03-user-management)
-- [marketing-content](02-use-cases/04-marketing-content)
-- [store-branch-management](02-use-cases/05-store-branch-management)
-- [system-notification](02-use-cases/06-system-notification)
+- [Product Management](02-use-cases/01-product-management)
+- [Order Management](02-use-cases/02-order-management)
+- [User Management](02-use-cases/03-user-management)
+- [Marketing Content](02-use-cases/04-marketing-content)
+- [Store Branch Management](02-use-cases/05-store-branch-management)
+- [System Notification](02-use-cases/06-system-notification)

@@ -1,0 +1,359 @@
+openapi: 3.0.3
+info:
+  title: Nest Store API
+  description: E-commerce Platform API Documentation for Nest Store
+  version: 1.0.0
+  contact:
+    email: support@nest-store.com
+servers:
+  - url: http://localhost:9000/api/v1
+    description: Local Development Server
+  - url: https://api.nest-store.com/v1
+    description: Production server
+  - url: https://staging-api.nest-store.com/v1
+    description: Staging server
+
+tags:
+  - name: Authentication
+    description: User authentication endpoints
+  - name: Products
+    description: Product management
+  - name: Users
+    description: User management
+
+paths:
+  /auth/login:
+    post:
+      tags:
+        - Authentication
+      summary: User login
+      description: Authenticate user and get access token
+      operationId: loginUser
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LoginRequest"
+      responses:
+        "200":
+          description: Successful login
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LoginResponse"
+        "401":
+          description: Invalid credentials
+
+  /auth/register:
+    post:
+      tags:
+        - Authentication
+      summary: Register new user
+      description: Create a new user account
+      operationId: registerUser
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RegisterRequest"
+      responses:
+        "201":
+          description: User created successfully
+        "400":
+          description: Validation error
+
+  /product/list-filter:
+    get:
+      tags:
+        - Products
+      summary: List all products with filters
+      description: Retrieve a paginated and filtered list of products
+      operationId: listProducts
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: string
+            default: "0"
+          description: Page number (0-indexed)
+        - name: maxSize
+          in: query
+          schema:
+            type: string
+            default: "2"
+          description: Number of items per page
+      responses:
+        "200":
+          description: List of products
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProductListResponse"
+
+    post:
+      tags:
+        - Products
+      summary: Create product
+      description: Create a new product (Admin only)
+      operationId: createProduct
+      security:
+        - OAuth2: [openid, profile, email]
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateProductRequest"
+      responses:
+        "201":
+          description: Product created successfully
+
+  /product/{id}:
+    get:
+      tags:
+        - Products
+      summary: Get product by ID
+      description: Retrieve a single product by its ID
+      operationId: getProduct
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Product details
+        "404":
+          description: Product not found
+
+  /users:
+    get:
+      tags:
+        - Users
+      summary: List users
+      description: Retrieve a list of users
+      operationId: listUsers
+      security:
+        - OAuth2: [openid, profile, email]
+        - BearerAuth: []
+      responses:
+        "200":
+          description: List of users
+
+    post:
+      tags:
+        - Users
+      summary: Create user
+      description: Create a new user (admin only)
+      operationId: createUser
+      security:
+        - OAuth2: [openid, profile, email]
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateUserRequest"
+      responses:
+        "201":
+          description: User created successfully
+
+  /users/{id}:
+    get:
+      tags:
+        - Users
+      summary: Get user by ID
+      description: Retrieve a single user by ID
+      operationId: getUser
+      security:
+        - OAuth2: [openid, profile, email]
+        - BearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: User details
+        "404":
+          description: User not found
+
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: http://localhost:19080/realms/nest-ecom/protocol/openid-connect/auth
+          tokenUrl: http://localhost:19080/realms/nest-ecom/protocol/openid-connect/token
+          scopes:
+            openid: OpenID Connect scope
+            profile: User profile information
+            email: User email address
+        password:
+          tokenUrl: http://localhost:19080/realms/nest-ecom/protocol/openid-connect/token
+          scopes:
+            openid: OpenID Connect scope
+            profile: User profile information
+            email: User email address
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    LoginRequest:
+      type: object
+      required:
+        - email
+        - password
+      properties:
+        email:
+          type: string
+          format: email
+          example: user@example.com
+        password:
+          type: string
+          format: password
+          example: "securePassword123"
+
+    LoginResponse:
+      type: object
+      properties:
+        accessToken:
+          type: string
+          example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+        refreshToken:
+          type: string
+          example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+        expiresIn:
+          type: integer
+          example: 3600
+        user:
+          $ref: "#/components/schemas/User"
+
+    RegisterRequest:
+      type: object
+      required:
+        - email
+        - password
+        - name
+      properties:
+        email:
+          type: string
+          format: email
+          example: user@example.com
+        password:
+          type: string
+          format: password
+          minLength: 8
+          example: "securePassword123"
+        name:
+          type: string
+          example: "John Doe"
+
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: "550e8400-e29b-41d4-a716-446655440000"
+        email:
+          type: string
+          format: email
+        name:
+          type: string
+        role:
+          type: string
+          enum: [user, admin, vendor]
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+
+    CreateProductRequest:
+      type: object
+      required:
+        - name
+        - description
+        - price
+      properties:
+        name:
+          type: string
+          example: "Premium Plan"
+        description:
+          type: string
+          example: "Premium subscription plan"
+        price:
+          type: number
+          format: double
+          example: 99.99
+        category:
+          type: string
+          example: "subscription"
+
+    Product:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        description:
+          type: string
+        price:
+          type: number
+          format: double
+        category:
+          type: string
+        vendorId:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+
+    ProductListResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: "#/components/schemas/Product"
+        pagination:
+          type: object
+          properties:
+            page:
+              type: integer
+            limit:
+              type: integer
+            total:
+              type: integer
+            totalPages:
+              type: integer
+
+    CreateUserRequest:
+      type: object
+      required:
+        - email
+        - name
+        - role
+      properties:
+        email:
+          type: string
+          format: email
+        name:
+          type: string
+        role:
+          type: string
+          enum: [user, admin, vendor]

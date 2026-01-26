@@ -1,0 +1,71 @@
+---
+id: list-products
+title: "List all products"
+description: "Retrieve a paginated list of products"
+sidebar_label: "List all products"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVU1v2zAM/SsGz85Hdyp8Wod2Q4diCJoNOxQ5MDLjqJMtjaKDBYH/+0DF+WiSdsVOia3HR/Lpkd6AYBWheIIJ+7I1EmGWQ0nRsA1ifQMFPJKwpRVlmAWsbINCZeZslMwvsrALy8EHYtSY+xIKUMDkcBiQsSYh1mQbaLAmKCBgRZCD1TS/W+I15BDNkmqEYgOyDgqyjVBFDFrXAlsnUFx1Xb4ncba28l8s466b5cAUg28iRUV/GI/156UCD+fNGt8INaJYDMFZkzofPUcN2Jyn9/NnMlplYNVJ7DZdiXKMQmbU6q1QHf8dbcsjTBS2TQU5LDzXKFBA29oSurzX6RTYndzzhfPA1hxHNm09TxLuU5S+nTtSrEGhyvP6ItGKmtLz/YVyNZJJLXUjbzZTotBAbE3QdTmIFae43mHpXW/Ol828olwy3rk5urx308Uj8YLujaMJVhQvnXcXSlZPPfbOS4guh5pk6XV4KkoloyyhgNGR7SLxajdDLTsoYCkSitHIeYNu6aMU1+Pr8QiDHa2u4HSUHxSV3dKKnA81NZJNEyHoOB34YjFShmFDUQZRPNPQ+PoSYd+M9U0WX2OKohdTDd7HON2i93Qzbdq0bGU91aHaKvyJkIlvWhVor7cm3I2+Ps8TCPL+z+edlb7+/J4MY5uFT+H9zXyjKNlUi8tuJvdnld0NjK9rYkPZxKGoMxWX3XrTqpbJetnCc3YgAvU+xy3B1XA8HPe7A00yGdVoVavYhuBZPr7UZ2trH6XG5Ol+4aV1hM4d76OTUd6vp3dv715DoT8yCg5to7ZOF7npjfgE4egboV7Td5vNHCP9YNd1+nq7f9WepY04d1RCsUAXKYdftD6s/BW6VvMlv7wC3S32A3amD2wVDMXTrMthSVgSp4TboBtjKBxHna1nZdlP2pc79cJfkHNphg==
+sidebar_class_name: "get api-method"
+info_path: docs/api/nest-store-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List all products"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/products"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieve a paginated list of products
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"page","in":"query","schema":{"type":"integer","default":1}},{"name":"limit","in":"query","schema":{"type":"integer","default":10}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of products","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"object","properties":{"id":{"type":"string","format":"uuid"},"name":{"type":"string"},"description":{"type":"string"},"price":{"type":"number","format":"double"},"category":{"type":"string"},"vendorId":{"type":"string"},"createdAt":{"type":"string","format":"date-time"}},"title":"Product"}},"pagination":{"type":"object","properties":{"page":{"type":"integer"},"limit":{"type":"integer"},"total":{"type":"integer"},"totalPages":{"type":"integer"}}}},"title":"ProductListResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

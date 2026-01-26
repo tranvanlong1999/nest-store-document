@@ -1,0 +1,71 @@
+---
+id: create-user
+title: "Create user"
+description: "Create a new user (admin only)"
+sidebar_label: "Create user"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNlE1PGzEQhv+KNadWcrKhJ7QnoFCJqmojEtRDtAfHO0kWdm3jj0C08n+vxl5IQqja03rt8evxO4+nBy/WDsoF3Du0DioONTppG+MbraCErxaFRyaYwmcWHFr2SdRdo5hW7e4zcNAGraDg2xpKkCmctICDQxls43dQLnq4QmHRXga/gXJRxYqDxaeAzl/pegdln34bizWU3gbkILXyqDwtCWPaRqZTigdHefXg5AY7QSO/Mwgl6OUDSg/8QGgB2ImmBQ5KdEhLukW6o7GUtm/QkUAO2is5bxu1Bg4rbTvhoRwi4qBzEhkH5Q8kUIWOEgnZkuQdcNiiqrWFKkYOvvG0d7CavLvLzkCMtG7RGa1czvXL5Iw+x0WiPSxbXzMXpETnVqFtd0D7O/QbTcUx2pE/RlANoAip4lQmu6URVSnYFkrYeG/Komi1FO1GO1+eT84nhTBNsT2D94T8oCh2jVtstelQeTZLghD5oZ4rC1IYK3R+5Ly2OJa6+0hwanUdJP0w9zcl58W6UevR/ynOcvSbXLVnc0YYZWsPCX0rJB1IHqUwKGGZgoAPg2+vhHz/PU9mE553e7BvXkRnMhkDZYmEC8zzlPArnQfQZJgyM5FDo1Y6pTSA8hOdZzO6MLuc3p7c9mYkddehlcimrfAEMcWxay0D1Se9I7bSlu2FEpLWZYGz8WQ8gfwChfSHybtgjLb+4tjzdHOiqxPpbQ73GXrHgP5Rkv3+ef+7xQyl8PjiC9OKRpEpiYd+gDm/r9S+iFea6PulcHhv2xhp+imgpUZUcdgK24glObmoIocNihptov8Rd5RPzmw0p2MpvA10/EkTIoze3tb012xOVAzNrNM17bHimcopnqGE1Ctpd4ItzfXQCrUOYk2xWZOcFMcIvkMuZTosCbU7yLDvc8RcP6KKEfhwIU//EKsY4x/6PAkb
+sidebar_class_name: "post api-method"
+info_path: docs/api/nest-store-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create user"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/users"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new user (admin only)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["email","name","role"],"properties":{"email":{"type":"string","format":"email"},"name":{"type":"string"},"role":{"type":"string","enum":["user","admin","vendor"]}},"title":"CreateUserRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":"User created successfully"}}}
+>
+  
+</StatusCodes>
+
+
+      

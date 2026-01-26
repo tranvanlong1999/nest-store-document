@@ -1,0 +1,8 @@
+{
+  "label": "Quản lý Chi nhánh & Vendor",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Các use case liên quan đến vận hành chi nhánh và quản lý tài chính vendor."
+  }
+}

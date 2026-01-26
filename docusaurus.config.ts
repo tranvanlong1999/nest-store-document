@@ -77,6 +77,14 @@ const config: Config = {
                 id: 'openapi',
                 docsPluginId: 'classic',
                 config: {
+                    neststore: {
+                        specPath: "api-swagger/nest-store-api.yaml",
+                        outputDir: "docs/api",
+                        sidebarOptions: {
+                            groupPathsBy: "tag",
+                            categoryLinkSource: "tag",
+                        },
+                    }
                 }
             }
         ]

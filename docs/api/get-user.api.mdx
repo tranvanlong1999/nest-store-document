@@ -1,0 +1,71 @@
+---
+id: get-user
+title: "Get user by ID"
+description: "Retrieve a single user by ID"
+sidebar_label: "Get user by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNU01v2zAM/SvCO22AGqdDD4VO69Cu6DAMRdNihyAHxWYSobbkSnSwwNB/H+i4H+nabSeL8tPj4yPZg+06wcxxlygmLDQqSmV0LbvgYXBDHB1tSVmVnF/XpLpEUS136uocGqGlaAV6VcFgTSw00EhUdtHxDmbe4wvZSPGs4w3MfJEXGq2NtiGWjALwtiEYuAoaTrK2ljfQiPTQuUgVDMeONFK5ocbC9OBdKy8SR+fXyMIZKbXBJ0ry/9N0Kp/DWkSbqoitqxOyxsn05B2QD6xWofMVctZoiDdhrA96L86gECNS0bsqDwXH7WM5XaxhsGFuTVHUobT1JiQ2p9PTaWFbV2yP8drm74JS57SlOrQNeVazgRBZv+RLphCGiafER4lDpEkZmrcIr2OoulICld5jSmzXzq+P/o9xtkc/0S2euzyTvuyNf9nrpzZJQoztk3g5gKDHw9cQG8sw+PbzdjDc+VUYnjuuBf+DEquZiFNn11d/KLs4KkPTUCxJXdeWVyE2glPnoezEy2FA1SpE9UwEDenXnuB4Mp1MoVEGz7ZkSU2NdeJV6to2RP586M+gsg2JG+sFPQ7wJfHhehzo7Ad+8vzvtRp9Y/rFRVtb52Vch+b14/jNMYwfNIyrZG1lxOS675c20V2sc5brh46ibOFCY2ujs0sxdN6jcknOFczK1on+IvXDzbiFH9V7ysZL63diq607iaBxT7v9WufFyzW6vLiFhj2ckVczMYh8k7fv94jbcE8+56c0LLFkyvk3QnukNw==
+sidebar_class_name: "get api-method"
+info_path: docs/api/nest-store-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get user by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/users/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieve a single user by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"User details"},"404":{"description":"User not found"}}}
+>
+  
+</StatusCodes>
+
+
+      

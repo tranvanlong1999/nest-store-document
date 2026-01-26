@@ -1,0 +1,71 @@
+---
+id: register-user
+title: "Register new user"
+description: "Create a new user account"
+sidebar_label: "Register new user"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVE1v2zAM/SsGz0qcdjsUPrVdO6BFsQVNux2CHBSZidXZkkvRbQPD/32g7Hz0Y8VyiSVRT498j2yB9TpANoezhgt0bI1m6x0sFOQYDNk6LjP4RqgZE504fE6agJRoY3zjGBT4Gileu8ohA8K1DYx0H5BAAeFjg4HPfb6BrI1LS5hDxtSgAuMdo2M50nVdDu+nD0FebSGYAistX7ypETLwywc0POD2QHPAStsSFNQ6hGdPOShwukLJoiZhxxaDgPSBe7TAZN0aFKw8VZoh20Hhi67qUmIk2dNhOTa+gu7goc+gDthU1t2gW3MB2ckhdkDTEE6HwKPjLwIeqX8AvL927QuXXHiErlPAluPm7VD3277g0HVyShhq70Kf/vHkSP5eKys6JSbKmyehMQZDWDVluREuXyeT9zd+6dLmUacEiTxFGhVy4UX/2geOWki2kOqGi3TrCVAQkJ6QxHMtNFRCBgVznaVp6Y0uCx84O5mcTFJd2/TpCN768Eaikgt8wtLXFTpOZhEQOnWIF7JUEMYOA48Ce4rSfQQ4JZ83JiYT/oUUWK+tW4/+D3HWR+/gFqrX2fJmJnbutThHTUjSdgday4NSoxgGGSxjEKjh4/vWWte/72LRpU1u9w12uXXIzunv3Xto3g/8t7XfgccUWLfykeVgtR8YOJlJDZKz6dW7AlyOjK8qJIPJtNQsDSFxyYU3jUjWW2flKdkDgQKxRQ9wNJ6MJ9APB234MJ/Q1LUnPn0tQyyGGK/ScWwMOWxbYje03lJt9/Pn0wk3yMP4wmldauukKtEj7WD0OYjR41warL5QIG6Wo7Zd6oD3VHadbD82SBvI5gsFT5qsXkpR54tOQYE6R4q98Qc3QqqnN7oTAhJeNkLk3agUk+06cPpzdieeGUZu5XO5Q/pZ6OlnyCAObbkdrRj3Wii1Wzd6LbE9pvz+AgANHbU=
+sidebar_class_name: "post api-method"
+info_path: docs/api/nest-store-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Register new user"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/auth/register"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new user account
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["email","password","name"],"properties":{"email":{"type":"string","format":"email","example":"user@example.com"},"password":{"type":"string","format":"password","minLength":8,"example":"securePassword123"},"name":{"type":"string","example":"John Doe"}},"title":"RegisterRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":"User created successfully"},"400":{"description":"Validation error"}}}
+>
+  
+</StatusCodes>
+
+
+      

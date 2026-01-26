@@ -1,0 +1,8 @@
+{
+  "label": "Quản lý Sản phẩm (Product)",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Các use case liên quan đến quản lý sản phẩm, danh mục và đánh giá."
+  }
+}

@@ -1,4 +1,5 @@
 ---
+sidebar_position: 9
 title: "UC09 - Đăng ký nhận thông báo"
 description: Mô tả kịch bản người dùng đăng ký nhận các bản tin hoặc cảnh báo từ hệ thống.
 ---
@@ -54,3 +55,4 @@ Cho phép khách hàng đăng ký nhận các thông báo về trạng thái đ�
 
 > [!NOTE]
 > Hệ thống sử dụng Kafka để xử lý việc gửi thông báo bất đồng bộ, không gây nghẽn tiến trình của người dùng.
+

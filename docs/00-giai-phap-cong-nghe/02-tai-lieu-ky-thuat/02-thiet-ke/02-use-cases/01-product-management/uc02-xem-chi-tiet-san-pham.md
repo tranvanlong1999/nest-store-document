@@ -1,4 +1,5 @@
 ---
+sidebar_position: 2
 title: UC02 - Xem chi tiết sản phẩm
 description: Mô tả chi tiết kịch bản người dùng xem thông tin chi tiết của một sản phẩm.
 ---
@@ -64,3 +65,4 @@ Cho phép khách hàng xem đầy đủ thông tin của một sản phẩm cụ
 
 > [!NOTE]
 > Thông tin giá và tồn kho được lấy thời gian thực từ cơ sở dữ liệu.
+

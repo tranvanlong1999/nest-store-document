@@ -1,4 +1,5 @@
 ---
+sidebar_position: 14
 title: "UC14 - Soạn thảo bài viết Blog (Admin)"
 description: Kịch bản quản trị viên quản lý nội dung tiếp thị trên website.
 ---
@@ -54,3 +55,4 @@ Cho phép Quản trị viên nội dung soạn thảo, đăng tải các bài vi
 
 > [!TIP]
 > Sử dụng các thẻ `tags` liên quan đến sản phẩm để tăng tỷ lệ chuyển đổi khi khách hàng đọc tin tức.
+

@@ -1,4 +1,5 @@
 ---
+sidebar_position: 21
 title: "UC21 - Quản lý Thông tin Tài chính (Vendor)"
 description: Kịch bản nhà bán hàng cấu hình tài khoản nhận tiền.
 ---
@@ -52,3 +53,4 @@ Cho phép Nhà bán hàng (Vendor) liên kết các tài khoản ngân hàng đ�
 
 > [!WARNING]
 > Thông tin tài khoản ngân hàng được sử dụng cho toàn bộ các lệnh chuyển tiền định kỳ từ hệ thống tới nhà bán hàng.
+

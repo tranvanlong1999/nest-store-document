@@ -1,4 +1,5 @@
 ---
+sidebar_position: 8
 title: "UC08 - Xem danh sách chi nhánh"
 description: Mô tả kịch bản tìm kiếm cửa hàng/chi nhánh gần nhất.
 ---
@@ -54,3 +55,4 @@ Cho phép khách hàng tra cứu thông tin về các cửa hàng vật lý ho�
   - `500 Internal Server Error`: Lỗi kết nối server.
 
 ---
+

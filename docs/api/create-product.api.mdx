@@ -1,0 +1,71 @@
+---
+id: create-product
+title: "Create product"
+description: "Create a new product"
+sidebar_label: "Create product"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNlE1vGjEQhv/Kas6GJT2FPTUhqZSqalGg6gFxMN4BnOzajj9I0Mr/vRrvAgtpqpxY7PE7X89MA55vHBQLmFpdBuEdLBmU6ISVxkutoICJRe4x45nC18y0ZsBAG7ScTB5KKEAko+nx1qEIVvo9FIsGbpFbtDfBb6FYLOOSgcWXgM7f6nIPRZP+SoslFN4GZCC08qg8XXFjKimSo/zJUUANOLHFmtOX3xuEAvTqCZPbk9ACFK8RzpNhYKwUSDkaSwl4iY50ku1Jz3kr1QYY4BuvTUVHU4u1DHU2rbiCeFGjzzx0YXV8kZlOpQ3n9F6FeoUWGKy1rbmHAkodVhX2Fcfj4XgcGQjucaPt/v/u+24hRgZe+nQx6Xfsse0HxEgmFp3RyrWl+TK6op9zJrpnWdv2MnNBCHRuHapqn7zU6LeawDDaUWMMp+ZDbg6YESJ2h9YlQoKtoICt96bI80oLXm2188X16HqUcyPz3RVcYvmDrLI73GGlTY3KZ7MkCJH19VyRk8JQofMD57XFodD1vwS7nKg97iMl5/lGqs3gc4qz1vootzzNxYwQbgvcn45jJ8kh1SiZQQGrZASs+/h2wOP7n3mqN43G42mo7g/9P6B9zu/71D9i9Ihooq4P3QVZDKRa65RBB9hPdD6bUX2ym+nDO5/3A6HrGq1AiskT8GSX3WkRqJ1p5LO1ttlJCBgQMq3A1XA0HEG7LLhIywJrLqsUmjHa+q/nLUqFIh5rrnqV6fbbabNdjPZxGX20CbuWeXzzuam4TNVI3DQd9wswvfVKaNNZ06y4w9+2ipGOXwJSXRdLBjtuJaexp3XJYIu8RJsG5Rmp9JM2pMGcPJN5FSiCd7uSiDtO4vTXbE4AdTu31iW9sfyV9iZ/hQLSVqfXict01kDF1SbwDdm2mlRFfk7rBZ0p0u6Kq30vwqZpLeb6GVWMwLqEPP2HuIwx/gW3aUZ5
+sidebar_class_name: "post api-method"
+info_path: docs/api/nest-store-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create product"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/products"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new product
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["name","description","price"],"properties":{"name":{"type":"string","example":"Premium Plan"},"description":{"type":"string","example":"Premium subscription plan"},"price":{"type":"number","format":"double","example":99.99},"category":{"type":"string","example":"subscription"}},"title":"CreateProductRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":"Product created successfully"}}}
+>
+  
+</StatusCodes>
+
+
+      

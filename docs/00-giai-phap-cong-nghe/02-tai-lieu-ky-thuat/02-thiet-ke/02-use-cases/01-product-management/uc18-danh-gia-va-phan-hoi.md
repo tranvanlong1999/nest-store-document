@@ -1,4 +1,5 @@
 ---
+sidebar_position: 18
 title: "UC18 - Đánh giá và Phản hồi"
 description: Mô tả kịch bản người dùng gửi đánh giá cho sản phẩm hoặc gian hàng.
 ---
@@ -55,3 +56,4 @@ Cho phép khách hàng đã mua hàng thực hiện gửi nhận xét, đánh gi
 
 > [!NOTE]
 > Hệ thống hỗ trợ đánh giá phân cấp (`uuid_parent_product_review`), cho phép chủ cửa hàng phản hồi lại nhận xét của khách hàng.
+

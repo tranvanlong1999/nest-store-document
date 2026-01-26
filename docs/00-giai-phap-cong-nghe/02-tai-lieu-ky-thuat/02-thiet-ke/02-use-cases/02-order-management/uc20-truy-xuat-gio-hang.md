@@ -1,4 +1,5 @@
 ---
+sidebar_position: 20
 title: "UC20 - Truy xuất Giỏ hàng"
 description: Mô tả kịch bản đồng bộ hóa giỏ hàng của người dùng trên nhiều phiên truy cập.
 ---
@@ -56,3 +57,4 @@ Cho phép khách hàng xem lại toàn bộ các sản phẩm đã thêm vào gi
 
 > [!NOTE]
 > Hệ thống sử dụng bảng `cart` làm trung tâm lưu trữ lâu dài (Persistence), giúp người dùng không bị mất dữ liệu khi tắt trình duyệt.
+
