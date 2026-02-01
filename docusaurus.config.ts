@@ -61,7 +61,7 @@ const config: Config = {
 
     plugins: [
         './plugins/tailwind-plugin.js',
-        [
+        /*[
             'ideal-image',
             {
                 quality: 70,
@@ -70,7 +70,7 @@ const config: Config = {
                 steps: 2,
                 disableInDev: true
             }
-        ],
+        ],*/
         [
             'docusaurus-plugin-openapi-docs',
             {
