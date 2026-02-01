@@ -2,7 +2,16 @@ import React, { useState } from 'react';
 import styles from './AuthPanel.module.css';
 
 export default function AuthPanel() {
-  const [token, setToken] = useState(localStorage.getItem('api_token') || '');
+  const [token, setToken] = useState('');
+
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const storedToken = localStorage.getItem('api_token');
+      if (storedToken) {
+        setToken(storedToken);
+      }
+    }
+  }, []);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
