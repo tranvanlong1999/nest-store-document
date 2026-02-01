@@ -12,7 +12,7 @@ export const themeConfig: ThemeConfig = {
         items: [
             {
                 type: "doc",
-                docId: "giai-phap-cong-nghe/tai-lieu-ky-thuat/tong-quan",
+                docId: "giai-phap-cong-nghe/tai-lieu-ky-thuat/thu-thap-yeu-cau/tong-quan",
                 label: "Tài liệu kỹ thuật",
                 position: "left",
             },
@@ -36,15 +36,15 @@ export const themeConfig: ThemeConfig = {
                 items: [
                     {
                         label: "Quản lý sản phẩm",
-                        to: "/docs/00-giai-phap-cong-nghe/02-tai-lieu-ky-thuat/02-thiet-ke/02-use-cases/01-product-management/uc01-xem-danh-sach-san-pham",
+                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/phan-tich-yeu-cau/chi-tiet-use-cases/product-management/uc01-xem-danh-sach-san-pham",
                     },
                     {
                         label: "Quản lý đơn hàng",
-                        to: "/docs/00-giai-phap-cong-nghe/02-tai-lieu-ky-thuat/02-thiet-ke/02-use-cases/02-order-management/uc03-them-vao-gio-hang",
+                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/phan-tich-yeu-cau/chi-tiet-use-cases/order-management/uc03-them-vao-gio-hang",
                     },
                     {
                         label: "Quản lý người dùng",
-                        to: "/docs/00-giai-phap-cong-nghe/02-tai-lieu-ky-thuat/02-thiet-ke/02-use-cases/03-user-management/uc05-dang-nhap-he-thong",
+                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/phan-tich-yeu-cau/chi-tiet-use-cases/user-management/uc05-dang-nhap-he-thong",
                     },
                 ],
             },
@@ -53,23 +53,23 @@ export const themeConfig: ThemeConfig = {
                 items: [
                     {
                         label: "Kiến trúc hệ thống",
-                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/kien-truc-he-thong",
+                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/kien-truc/kien-truc-tong-the",
                     },
                     {
                         label: "Backend Stack",
-                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/backend-stack",
+                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/kien-truc/backend-stack",
                     },
                     {
                         label: "Frontend Stack",
-                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/frontend-stack",
+                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/kien-truc/frontend-stack",
                     },
                     {
                         label: "Người dùng & Bảo mật",
-                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/nguoi-dung-bao-mat",
+                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/kien-truc/bao-mat-va-nguoi-dung",
                     },
                     {
                         label: "Thiết kế API",
-                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/thiet-ke-api",
+                        to: "/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/thiet-ke/thiet-ke-api",
                     },
                 ],
             },

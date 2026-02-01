@@ -27,12 +27,12 @@ function HomepageHeader() {
                 </p>
                 <div className={styles.buttons}>
                     <Link
-                        to="/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/tong-quan">
+                        to="/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/thu-thap-yeu-cau/tong-quan">
                         Khám phá tài liệu
                     </Link>
                     <Link
                         className={clsx("button button--lg", styles.btnSecondary)}
-                        to="/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/kien-truc-he-thong">
+                        to="/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/kien-truc/kien-truc-tong-the">
                         Thiết kế hệ thống
                     </Link>
                 </div>
@@ -118,7 +118,7 @@ function CTASection() {
                     <div className={styles.buttons}>
                         <Link
                             className={clsx("button button--lg", styles.btnPrimary)}
-                            to="/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/tong-quan">
+                            to="/docs/giai-phap-cong-nghe/tai-lieu-ky-thuat/thu-thap-yeu-cau/tong-quan">
                             Bắt đầu ngay
                         </Link>
                     </div>
