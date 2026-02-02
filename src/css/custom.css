@@ -26,9 +26,7 @@
 @custom-variant dark (&:is([data-theme="dark"] *));
 
 /* Import fonts */
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Schibsted+Grotesk:wght@400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Momo+Trust+Sans:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;600;700&display=swap");
 
 /* Theme variables */
 :root {
@@ -55,7 +53,7 @@
   --ifm-footer-background-color: #f9fafb;
 
   --ifm-code-font-size: 95%;
-  --ifm-font-family-base: "Momo Trust Sans";
+  --ifm-font-family-base: "Inter", system-ui, -apple-system, sans-serif;
   --ifm-font-family-monospace: "JetBrains Mono", "Courier New", monospace;
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);

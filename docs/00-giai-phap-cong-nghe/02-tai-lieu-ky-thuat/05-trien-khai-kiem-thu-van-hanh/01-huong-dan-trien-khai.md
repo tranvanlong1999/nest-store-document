@@ -5,7 +5,7 @@ description: Hướng dẫn triển khai hệ thống Nest Store.
 
 # Triển khai và Vận hành
 
-Tài liệu này hướng dẫn cách triển khai hệ thống Nest Store lên các môi trường (Staging/Production) sử dụng công nghệ Docker và CI/CD.
+Tài liệu này hướng dẫn cách triển khai hệ thống Nest Store (Microservices) lên các môi trường (Staging/Production) sử dụng công nghệ Docker và CI/CD.
 
 ## 1. Môi trường Yêu cầu
 
@@ -40,7 +40,7 @@ ENTRYPOINT ["java", "-jar", "/app.jar"]
 
 ### Chạy hệ thống với Docker Compose
 
-Hệ thống bao gồm ứng dụng chính và các container phụ trợ (DB, Redis, Temporal):
+Hệ thống bao gồm các microservices chạy trên các container riêng biệt và các container phụ trợ (DB, Redis, Temporal):
 
 ```bash
 docker-compose up -d
@@ -80,10 +80,14 @@ graph TD
         end
 
         subgraph AppZone [App Zone - Docker Network]
-            subgraph AppContainer [App Container]
-                API[API Gateway - Spring Boot]
-                Mod[Modular Monolith Services]
+            subgraph Services [Microservices]
+                Product[Product Service]
+                Order[Order Service]
+                User[User Service]
+                Other[Other Services...]
             end
+
+            API[API Gateway]
 
             subgraph WorkerContainer [Worker Container]
                 Worker[Temporal Worker]
@@ -102,16 +106,21 @@ graph TD
     %% Connections
     Client -- "HTTPS (443)" --> LB
     LB -- "HTTP (8080)" --> API
-    API -- "In-process" --> Mod
+    API -- "REST/gRPC" --> Product
+    API -- "REST/gRPC" --> Order
+    API -- "REST/gRPC" --> User
+    API -- "REST/gRPC" --> Other
 
-    Mod -- "JDBC (5432)" --> DB
-    Mod -- "TCP (6379)" --> Redis
-    Mod -- "TCP (9092)" --> Kafka
-    Mod -- "gRPC (7233)" --> TempoSvc
-    Mod -- "HTTP (9000)" --> MinIO
+    Services -- "JDBC" --> DB
+    Services -- "TCP" --> Redis
+    Services -- "TCP" --> Kafka
+    Services -- "gRPC" --> TempoSvc
+    Services -- "HTTP" --> MinIO
 
     Worker -- "gRPC" --> TempoSvc
     Worker -- "JDBC" --> DB
-    Worker -.->|Execute| Mod
+    Worker -- "gRPC" --> TempoSvc
+    Worker -- "JDBC" --> DB
+    Worker -.->|Execute| Services
     TempoSvc -- "Store State" --> DB
 ```

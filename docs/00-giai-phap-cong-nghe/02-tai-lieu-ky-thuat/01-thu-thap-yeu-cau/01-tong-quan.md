@@ -17,7 +17,7 @@ Xây dựng một hệ thống E-commerce hiện đại, cho phép các doanh ng
 
 ## 2. Các Module Chính
 
-Hệ thống được thiết kế theo mô hình **Modular Monolith**, bao gồm các module chức năng chính:
+Hệ thống được thiết kế theo mô hình **Microservices**, bao gồm các service chức năng chính:
 
 1.  **Sản phẩm (Product Management):** Quản lý danh mục, thuộc tính động, tồn kho và đánh giá sản phẩm.
 2.  **Đơn hàng (Order Management):** Xử lý luồng đặt hàng, giỏ hàng và lịch sử giao dịch.

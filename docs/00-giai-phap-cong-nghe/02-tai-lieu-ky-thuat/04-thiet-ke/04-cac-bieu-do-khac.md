@@ -9,7 +9,7 @@ Tài liệu này tổng hợp các biểu đồ kiến trúc và thiết kế c�
 
 ## 1. High-Level Architecture (C4 Model)
 
-Mô hình kiến trúc tổng quan của hệ thống Nest Store, được thiết kế theo hướng **Modular Monolith**.
+Mô hình kiến trúc tổng quan của hệ thống Nest Store, được thiết kế theo hướng **Microservices**.
 
 ```mermaid
 graph TD
@@ -25,7 +25,7 @@ graph TD
         AdminPortal[Admin Portal<br/>React/Next.js]
 
         %% Backend Boundary
-        subgraph BackendServices [Backend Services - Modular Monolith]
+        subgraph BackendServices [Backend Services - Microservices]
             direction TB
             APIGateway[API Gateway / Core Service<br/>Spring Boot]
 
@@ -201,7 +201,7 @@ graph TD
         Nginx[Nginx / Cloud LB]
     end
 
-    subgraph "Application Server (Spring Boot Modular Monolith)"
+    subgraph "Application Server (Spring Boot Microservices)"
         Controller[REST Controllers]
         Service[Service Layer]
 

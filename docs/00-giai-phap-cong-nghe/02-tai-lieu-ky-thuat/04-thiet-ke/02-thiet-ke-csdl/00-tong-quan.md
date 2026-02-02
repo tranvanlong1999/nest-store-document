@@ -5,7 +5,7 @@ description: Quy chuẩn và kiến trúc lưu trữ dữ liệu của Nest Stor
 
 # Tổng quan Thiết kế Database
 
-Hệ thống Nest Store sử dụng **PostgreSQL** làm cơ sở dữ liệu quan hệ chính, được thiết kế theo mô hình **Modular Monolithic** với ranh giới dữ liệu rõ ràng giữa các phân hệ.
+Hệ thống Nest Store sử dụng **PostgreSQL** làm cơ sở dữ liệu quan hệ chính, được thiết kế theo mô hình **Microservices** với ranh giới dữ liệu rõ ràng giữa các phân hệ.
 
 ## 1. Nguyên tắc Thiết kế Cốt lõi
 

@@ -45,9 +45,9 @@ Hệ thống Nest Store Backend được xây dựng trên nền tảng Java hi�
 - **File Processing:** Apache POI (Excel), Apache Tika (Mime-type).
 - **Functional:** Vavr 0.10.6
 
-## 6. Business Logic Modules
+## 6. Microservices Structure
 
-Backend được chia thành các module chức năng:
+Backend được chia thành các microservices độc lập:
 
 - `nest-store-service`: Core commerce logic.
 - `nest-user-service`: User & Identity.
@@ -57,4 +57,4 @@ Backend được chia thành các module chức năng:
 ---
 
 > [!TIP]
-> Backend được thiết kế theo hướng **Modular Monolith**, sẵn sàng để chuyển đổi sang Microservices khi quy mô hệ thống yêu cầu.
+> Backend được thiết kế theo hướng **Microservices**, đảm bảo khả năng mở rộng và linh hoạt khi quy mô hệ thống tăng lên.

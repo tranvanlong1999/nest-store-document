@@ -1,27 +1,27 @@
 ---
 title: Kiến trúc Hệ thống
-description: Mô tả kiến trúc Modular Monolith và các thành phần kỹ thuật.
+description: Mô tả kiến trúc Microservices và các thành phần kỹ thuật.
 ---
 
 # Kiến trúc Hệ thống Nest Store
 
-Hệ thống Nest Store được xây dựng theo kiến trúc **Modular Monolith** (Đơn khối module hóa), kết hợp với các giải pháp xử lý phân tán để đảm bảo hiệu năng và khả năng bảo trì.
+Hệ thống Nest Store được xây dựng theo kiến trúc **Microservices** (Kiến trúc vi dịch vụ), kết hợp với các giải pháp xử lý phân tán để đảm bảo hiệu năng và khả năng bảo trì.
 
-## 1. Mô hình Modular Monolith
+## 1. Mô hình Microservices
 
-Thay vì chia nhỏ thành các microservices ngay từ đầu, hệ thống được tổ chức thành các domain module tách biệt bên trong một codebase duy nhất. Điều này giúp:
+Hệ thống được tổ chức thành các **Microservices** độc lập, giao tiếp với nhau qua mạng (REST API / gRPC / Kafka). Điều này mang lại các lợi ích:
 
-- Giảm chi phí vận hành (operational complexity).
-- Đảm bảo tính nhất quán (transactional integrity) dễ dàng hơn.
-- Sẵn sàng để tách ra microservices khi cần scale lớn.
+- **Khả năng mở rộng độc lập:** Có thể scale từng service riêng biệt dựa trên tải thực tế (ví dụ: chỉ scale Order Service trong dịp sale).
+- **Công nghệ đa dạng:** Mỗi team có thể chọn công nghệ phù hợp nhất cho service của mình (Polyglot).
+- **Triển khai độc lập:** Việc deploy một service không ảnh hưởng đến toàn bộ hệ thống.
 
-### Các Domain Module
+### Các Microservices Chính
 
-- `product`: Quản lý catalog và tồn kho.
-- `order`: Xử lý checkout và quản lý trạng thái đơn hàng.
-- `user`: Authentication, Authorization và Profile.
-- `marketing`: CMS cho blog và engine khuyến mãi.
-- `notify`: Xử lý thông báo bất đồng bộ.
+- `product-service`: Quản lý catalog, thông tin sản phẩm và tồn kho.
+- `order-service`: Xử lý luồng checkout, quản lý đơn hàng và thanh toán.
+- `user-service`: Authentication (SSO), Authorization và quản lý thông tin người dùng.
+- `marketing-service`: CMS cho bài viết blog và engine quản lý chương trình khuyến mãi.
+- `notification-service`: Xử lý gửi email, SMS, push notification đa kênh bất đồng bộ.
 
 ## 2. Các Thành phần Kỹ thuật (Technical Stack)
 
